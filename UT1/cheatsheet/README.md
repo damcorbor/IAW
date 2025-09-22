@@ -78,7 +78,7 @@ Tienes dos opciones:
    echo "Esto es una prueba" > ejemplo.txt
    git add .
    git commit -m "He creado el fichero ejemplo.txt"
-   git push origin main
+   git push origin main```
 
 ### Traer cambios desde GitHub
 ```git pull origin main```
