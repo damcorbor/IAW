@@ -76,7 +76,7 @@ Tienes dos opciones:
 ### Subir cambios a GitHub (EXPLICAR.......................................................................)
 ```bash   
    echo "Esto es una prueba" > ejemplo.txt
-   git add .```
+   git add .
    git commit -m "He creado el fichero ejemplo.txt"
    git push origin main
 
