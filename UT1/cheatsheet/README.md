@@ -47,16 +47,12 @@
    - Pega el contenido de tu clave pública.  
    - Guarda los cambios.  
 
----
-
 ## Configuración de Git en tu equipo
 1. Instala Git (ejemplo en Ubuntu/Debian):  
    ***sudo apt install git***
 2. Configura tu identidad (se guarda de forma global en el sistema):  
    ***git config --global user.name "Tu Nombre Completo"***  
    ***git config --global user.email tu_email@example.com***
-
----
 
 ## Crear un repositorio
 Tienes dos opciones:  
@@ -68,14 +64,10 @@ Tienes dos opciones:
    ***git branch -M main***  
    ***git push -u origin main***
 
----
-
 ## Clonar un repositorio
 1. Sitúate en el directorio donde quieras clonar.  
 2. Ejecuta:  
    ***git clone git@github.com:usuario/repositorio.git***
-
----
 
 ## Trabajar con cambios
 
@@ -87,8 +79,6 @@ Tienes dos opciones:
 
 ### Traer cambios desde GitHub
 ***git pull origin main***
-
----
 
 ## Comandos útiles
 - Ver el estado de los archivos:  
