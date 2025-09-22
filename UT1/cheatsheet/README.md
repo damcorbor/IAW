@@ -53,17 +53,18 @@
 2. Configura tu identidad (se guarda de forma global en el sistema):  
    ```bash
       git config --global user.name "Tu Nombre Completo"
-      git config --global user.email tu_email@example.com```
+      git config --global user.email tu_email@example.com
 
 ## Crear un repositorio
 Tienes dos opciones:  
 
 - **Desde GitHub**: crea un nuevo repositorio desde la web y sigue las instrucciones que te da.  
 - **Desde local**: inicializa un repositorio y luego conéctalo con GitHub:  
-  ```git init```
-  ```git remote add origin git@github.com:usuario/repositorio.git```
-  ```git branch -M main```
-  ```git push -u origin main```
+  ```bash
+     git init
+     git remote add origin git@github.com:usuario/repositorio.git
+     git branch -M main```
+     git push -u origin main
 
 ## Clonar un repositorio
 1. Sitúate en el directorio donde quieras clonar.  
@@ -72,11 +73,12 @@ Tienes dos opciones:
 
 ## Trabajar con cambios
 
-### Subir cambios a GitHub
-```echo "Esto es una prueba" > ejemplo.txt``` 
-```git add .```
-```git commit -m "He creado el fichero ejemplo.txt"```
-```git push origin main```
+### Subir cambios a GitHub (EXPLICAR.......................................................................)
+```bash   
+   echo "Esto es una prueba" > ejemplo.txt
+   git add .```
+   git commit -m "He creado el fichero ejemplo.txt"
+   git push origin main
 
 ### Traer cambios desde GitHub
 ```git pull origin main```
