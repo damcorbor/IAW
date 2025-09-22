@@ -51,8 +51,9 @@
 1. Instala Git (ejemplo en Ubuntu/Debian):  
    ```sudo apt install git```
 2. Configura tu identidad (se guarda de forma global en el sistema):  
-   ```git config --global user.name "Tu Nombre Completo"```
-   ```git config --global user.email tu_email@example.com```
+   ```bash
+      git config --global user.name "Tu Nombre Completo"
+      git config --global user.email tu_email@example.com```
 
 ## Crear un repositorio
 Tienes dos opciones:  
