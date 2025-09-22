@@ -79,9 +79,7 @@ Tienes dos opciones:
    git add .
    git commit -m "He creado el fichero ejemplo.txt"
    git push origin main
-
-
-
+```
 
 ### Traer cambios desde GitHub
 ```git pull origin main```
