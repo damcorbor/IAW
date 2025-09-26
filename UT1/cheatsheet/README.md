@@ -93,7 +93,7 @@ Tienes dos opciones:
 
 ## Trabajar con cambios
 
-### Subir cambios a GitHub (EXPLICAR.......................................................................)
+### Subir cambios a GitHub
 Crear un archivo con un texto dentro:
 ```bash   
 $echo "Esto es una prueba" > ejemplo.txt
