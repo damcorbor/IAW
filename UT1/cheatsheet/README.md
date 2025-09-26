@@ -67,19 +67,19 @@ Tienes dos opciones:
 
 - **Desde GitHub**: crea un nuevo repositorio desde la web y sigue las instrucciones que te da.  
 - **Desde local**: inicializa un repositorio y luego conéctalo con GitHub:  
-- Inicializar un nuevo repositorio Git en la carpeta actual (prevamiente mkdir..:
+  Inicializar un nuevo repositorio Git en la carpeta actual (prevamiente mkdir..):
   ```bash
   $git init
    ```
-  - Añadir un repositorio remoto llamado origin (enlace a GitHub en este caso):
+  Añadir un repositorio remoto llamado origin (enlace a GitHub en este caso):
   ```bash
   $git remote add origin git@github.com:usuario/repositorio.git
   ```
-- Renombrar la rama actual a main (por defecto suele llamarse master):
+  Renombrar la rama actual a main (por defecto suele llamarse master):
   ```bash
   $git branch -M main
   ```
-- Subir la rama main al remoto origin y establecer el seguimiento (para que en futuros git push y git pull no tengas que especificar rama/remoto):
+  Subir la rama main al remoto origin y establecer el seguimiento (para que en futuros git push y git pull no tengas que especificar rama/remoto):
   ```bash
   $git push -u origin main
   ```
@@ -94,19 +94,19 @@ Tienes dos opciones:
 ## Trabajar con cambios
 
 ### Subir cambios a GitHub (EXPLICAR.......................................................................)
-- Crear un archivo con un texto dentro:
+Crear un archivo con un texto dentro:
 ```bash   
 $echo "Esto es una prueba" > ejemplo.txt
 ```
-- Añadir todos los archivos modificados o nuevos al área de preparación (staging):
+Añadir todos los archivos modificados o nuevos al área de preparación (staging):
 ```bash   
 $git add .
 ```
-- Guardar los cambios en el repositorio local con un mensaje descriptivo:
+Guardar los cambios en el repositorio local con un mensaje descriptivo:
 ```bash
 $git commit -m "He creado el fichero ejemplo.txt"
 ```
-- Subir los commits locales al repositorio remoto en la rama main:
+Subir los commits locales al repositorio remoto en la rama main:
 ```bash
 $git push origin main
 ```
