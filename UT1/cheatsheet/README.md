@@ -125,4 +125,8 @@ $git pull origin main
   ```bash
   $git log
   ```
+- Borrar/quitar archivos del repositorio para que se eliminen en el próximo commit y en local.
+    ```bash
+  $git rm .
+  ```
 
