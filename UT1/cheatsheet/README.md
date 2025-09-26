@@ -69,19 +69,19 @@ Tienes dos opciones:
 - **Desde local**: inicializa un repositorio y luego conéctalo con GitHub:  
   Inicializar un nuevo repositorio Git en la carpeta actual (prevamiente mkdir..):
   ```bash
-  $git init
+$git init
    ```
   Añadir un repositorio remoto llamado origin (enlace a GitHub en este caso):
   ```bash
-  $git remote add origin git@github.com:usuario/repositorio.git
+$git remote add origin git@github.com:usuario/repositorio.git
   ```
   Renombrar la rama actual a main (por defecto suele llamarse master):
   ```bash
-  $git branch -M main
+$git branch -M main
   ```
   Subir la rama main al remoto origin y establecer el seguimiento (para que en futuros git push y git pull no tengas que especificar rama/remoto):
   ```bash
-  $git push -u origin main
+$git push -u origin main
   ```
   
 ## Clonar un repositorio
