@@ -1,134 +1,102 @@
-🐍 Chuleta de Cadenas de Texto en Python
-🔤 Concepto Básico
+# 🐍 Chuleta de Cadenas de Texto en Python
 
-Las cadenas de texto (strings) son secuencias de caracteres en Unicode.
-Permiten representar texto, símbolos y emojis 😎.
+## 🔤 Concepto básico
+Cadenas (strings) = secuencias de caracteres Unicode (incluye emojis 😎).
+Ejemplos: 'Hola', "Mundo"
 
-Ejemplo:
-'Hola, mundo' o "Hola, mundo"
+## 🧱 Crear strings
 
-🧱 Crear Strings
+Simples: 'texto'
 
-Comillas simples → 'texto'
+Dobles: "texto"
 
-Comillas dobles → "texto"
+Triples (multilínea / docstrings): """texto""" (PEP 257 recomienda dobles triples)
 
-Comillas triples → """texto multilínea"""
+## 🚫 Cadena vacía
+''
 
-💡 Usa triples comillas dobles para docstrings (PEP 257)
+## 🔄 Conversión de tipos
+str(10) → '10' · int('10') → 10 · float('3.14') → 3.14
 
-🚫 Cadena Vacía
+## 🧩 Secuencias de escape
+| Secuencia | Significado |
+|---|---|
+| \n | salto de línea |
+| \t | tabulación |
+| \' | comilla simple |
+| \\ | barra invertida |
 
-'' → cadena sin caracteres
-
-🔄 Conversión de Tipos
-
-str(10) → '10'
-int('10') → 10
-float('3.14') → 3.14
-
-🧩 Secuencias de Escape
-Secuencia	Significado
-\n	Salto de línea
-\t	Tabulación
-'	Comilla simple
-\	Barra invertida
-🧱 Raw Strings
-
-Evita procesar caracteres especiales.
+## 🧱 Raw strings
 r'a\tb\tc' → muestra literalmente a\tb\tc
 
-🖨️ Función print()
-
+## 🖨️ print()
 print(a, b, sep='|', end='!!')
 
-⌨️ Entrada por Teclado
-
+## ⌨️ Entrada por teclado
 name = input('Tu nombre: ')
+⚠️ No llames input a una variable.
 
-⚠️ No uses “input” como nombre de variable.
-
-➕ Operaciones con Strings
+## ➕ Operaciones
 
 Concatenar: 'Hola ' + 'Mundo'
+
 Repetir: 'Hi! ' * 3 → Hi! Hi! Hi!
 
-🔢 Índices y Slicing
+## 🔢 Índices y rebanadas (slicing)
+'Python'[0] → 'P' · 'Python'[-1] → 'n' · 'Python'[0:3] → 'Pyt'
+(fin exclusivo: llega hasta end - 1)
 
-'Python'[0] → 'P'
-'Python'[-1] → 'n'
-'Python'[0:3] → 'Pyt'
-
-📏 Longitud
-
+## 📏 Longitud
 len('Hola') → 4
 
-🔍 Buscar dentro de una Cadena
+## 🔍 Búsqueda
 
-'sol' in 'girasol' → True
-texto.startswith('Hola')
-texto.endswith('fin')
-texto.find('a') / texto.index('a')
-texto.count('a')
+Contiene: 'sol' in 'girasol' → True
 
-🧼 Limpiar Texto
+Inicio/fin: texto.startswith('Hola'), texto.endswith('fin')
 
-strip() → elimina espacios, \n, \t
-lstrip(), rstrip() → izquierda / derecha
+Primera ocurrencia: texto.find('a') / texto.index('a')
 
-🔁 Reemplazar
+Contar: texto.count('a')
 
-'mal'.replace('m', 'b') → 'bal'
+## 🧼 Limpiar texto
+strip() (espacios / \n / \t), lstrip(), rstrip()
+' x \n'.strip() → 'x' · s.strip(chars) para caracteres concretos
 
-🔠 Mayúsculas / Minúsculas
-Método	Efecto
-capitalize()	Primera mayúscula
-title()	Cada palabra mayúscula
-upper()	Todo mayúsculas
-lower()	Todo minúsculas
-swapcase()	Invierte mayús/minús
-🔎 Identificación de Caracteres
-Método	Devuelve True si...
-isalpha()	Solo letras
-isdigit()	Solo números
-isalnum()	Letras o números
-isupper()	Todo mayúsculas
-islower()	Todo minúsculas
-🧮 Interpolación (f-strings)
+## 🔁 Reemplazar
+'Quien mal anda'.replace('mal', 'bien')
 
+## 🔠 Mayúsculas / minúsculas
+capitalize() · title() · upper() · lower() · swapcase()
+
+## 🔎 Identificación de caracteres
+isalpha() · isdigit() · isalnum() · isupper() · islower()
+
+## 🧮 Interpolación (f-strings)
 f'Me llamo {name} y tengo {age} años'
+Formateo: f'{pi:.2f}' · f'{n:05d}' · f'{valor:x}' (hex)
+Debug: f'{var=}' → var=...
 
-✨ Formatear:
+## 🚀 Unicode
+'\N{ROCKET}' → 🚀 · ord('A') → 65 · chr(65) → 'A'
 
-f'{pi:.2f}' → 2 decimales
+## 🔡 Comparación
+Lexicográfica: 'a' < 'b', 'A' < 'a' (mayúsculas antes en Unicode)
 
-f'{n:05d}' → relleno con ceros
+## ✅ Resumen rápido
 
-f'{valor:x}' → hexadecimal
+Concatenar: 'a' + 'b'
 
-🧠 Modo debug:
-f'{var=}' → muestra var=valor
+Repetir: 'a' * 3
 
-🚀 Unicode
+Longitud: len(s)
 
-'\N{ROCKET}' → 🚀
-ord('A') → 65
-chr(65) → 'A'
+Buscar: 'x' in s
 
-🔡 Comparar Cadenas
+Limpiar: s.strip()
 
-Compara carácter a carácter (lexicográficamente):
-'a' < 'b', 'A' < 'a'
+Caso: s.upper(), s.lower()
 
-✅ Resumen Express
-Acción	Ejemplo
-Concatenar	'Hola' + '!'
-Repetir	'Hi! ' * 3
-Longitud	len(texto)
-Buscar	'a' in texto
-Limpiar	texto.strip()
-Mayúsculas	texto.upper()
-Interpolar	f'{var}'
+f-strings: f'{var}'
 
-📘 Recuerda:
-Los strings son inmutables → no se pueden modificar, solo crear nuevos.
+> Nota: los strings son inmutables (se crean nuevos al modificar).
