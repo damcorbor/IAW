@@ -4,10 +4,11 @@
 
 ## Práctica 2.1 – Instalación y configuración de servidor web Nginx
 
-```Actualizar repositorios e instalar Nginx```
+Actualizar repositorios e instalar Nginx
+```
 sudo apt update && sudo apt upgrade
 sudo apt install nginx
-
+```
 ***Comprobar estado del servicio***
 systemctl status nginx
 
