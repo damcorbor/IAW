@@ -102,8 +102,8 @@ f-strings: f'{var}'
 > Nota: los strings son inmutables (se crean nuevos al modificar).
 
 # ejercicios
-´´´
-# Password con patrón simple (string, random)
+```
+Password con patrón simple (string, random)
 import string
 import random
 
@@ -126,5 +126,5 @@ j = random.choice(simbolos)
 
 password = a + b + c + d + e + f + g + h + i + j
 print("Password generada: ", password)
-´´´
+```
 
