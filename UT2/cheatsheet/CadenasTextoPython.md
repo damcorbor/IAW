@@ -70,7 +70,7 @@ strip() (espacios / \n / \t), lstrip(), rstrip()
 capitalize() · title() · upper() · lower() · swapcase()
 
 ## 🔎 Identificación de caracteres
-isalpha() · isdigit() · isalnum() · isupper() · islower()
+isalpha() · isdigit() · isalnum() · isupper() · islower() · isnumeric()
 
 ## 🧮 Interpolación (f-strings)
 f'Me llamo {name} y tengo {age} años'
