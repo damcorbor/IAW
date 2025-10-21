@@ -137,3 +137,18 @@ print(f"¿Es la palabra {palabra1} mayor que la palabra {palabra2}?", palabra1 >
 ```
 print("Frase en orden inverso:", frase[::-1])
 ```
+```
+cadena = ' 192.168.001.010 '.strip()
+
+primer = cadena.find(".")
+octeto1fin = cadena[primer+1:]
+octeto1 = cadena[:primer]
+
+segundo = octeto1fin.find(".")
+octeto2fin = octeto1fin[segundo+1:]
+octeto2 = octeto1fin[:segundo]
+
+tercero = octeto2fin.find(".")
+octeto3fin = octeto2fin[tercero+1:]
+octeto3 = octeto2fin[:tercero]
+```
