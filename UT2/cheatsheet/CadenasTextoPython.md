@@ -130,3 +130,7 @@ print("Password generada: ", password)
 ```
 print("¿Todos los caracteres son numéricos?", numero.isnumeric())
 ```
+```
+print("¿Son iguales?", palabra1 == palabra2)
+print(f"¿Es la palabra {palabra1} mayor que la palabra {palabra2}?", palabra1 > palabra2)
+```
