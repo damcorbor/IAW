@@ -127,4 +127,6 @@ j = random.choice(simbolos)
 password = a + b + c + d + e + f + g + h + i + j
 print("Password generada: ", password)
 ```
-
+```
+print("¿Todos los caracteres son numéricos?", numero.isnumeric())
+```
