@@ -38,6 +38,10 @@ sudo mkdir -p /var/www/practica2_2/html
 sudo chown -R www-data:www-data /var/www/practica2_2/html
 sudo chmod -R 755 /var/www/practica2_2/html
 ```
+***Contenido de la pagina***
+```
+git clone https://github.com/The-Codesis/simple-static-website.git
+```
 
 ***Archivo de configuración***
 ```sudo nano /etc/nginx/sites-available/practica2_2```
