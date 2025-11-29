@@ -141,12 +141,70 @@ IP  www.departamentosiescaminas.org
 
 ---
 
+### Virualhost con ssl
+Instalar ssl:
+```bash
+sudo apt install openssl
+sudo a2enmod ssl
+sudo systemctl restart apache2
+```
+
+Crear certificaod ssl autofirmados
+```bash
+sudo openssl req -x509 -nodes -days 365 \
+  -newkey rsa:2048 \
+  -keyout /etc/ssl/private/iescaminas.key \
+  -out /etc/ssl/certs/iescaminas.crt
+```
+
+Crear el host virutal https
+```bash
+<VirtualHost *:443>
+    ServerName www.iescaminas_local.org
+    DocumentRoot /var/www/iescaminas
+
+    ErrorLog ${APACHE_LOG_DIR}/iescaminas_ssl_error.log
+    CustomLog ${APACHE_LOG_DIR}/iescaminas_ssl_access.log combined
+
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/iescaminas.crt
+    SSLCertificateKeyFile /etc/ssl/private/iescaminas.key
+
+    <Directory /var/www/iescaminas>
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+```
+
+Habilitar sitio https
+```bash
+sudo a2ensite iescaminas-ssl.conf
+sudo systemctl reload apache2
+```
+
+Redireccion a https (modficamos el virtualhost http)
+```bash
+sudo nano /etc/apache2/sites-available/iescaminas.conf
+```
+
+
+
 ## Práctica 3.4 – Implantación aplicación BookMedik
 
 ### Instalación:
 ```bash
 cd /var/www
 sudo git clone https://github.com/evilnapsis/bookmedik.git
+```
+```bash
+<VirtualHost *:80>
+    ServerName www.iescaminas_local.org
+    Redirect "/" "https://www.iescaminas_local.org/"
+</VirtualHost>
+```
+```bash
+sudo systemctl reload apache2
 ```
 
 ### VirtualHost:
