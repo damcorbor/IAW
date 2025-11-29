@@ -67,7 +67,14 @@ Acceso: `http://IP/phpmyadmin`
 ### GoAccess (análisis de logs Apache):
 ```bash
 sudo apt install goaccess
-sudo goaccess /var/log/apache2/access.log -o /var/www/html/report.html --real-time-html
+sudo goaccess /var/log/apache2/access.log \
+  --log-format='%h %^[%d:%t %^] "%r" %s %b "%R" "%u"' \
+  --date-format='%d/%b/%Y' \
+  --time-format='%T' \
+  --real-time-html \
+  -o /var/www/html/report.html
+sudo chmod 644 /var/www/html/report.html
+http://IP_DEL_SERVIDOR/report.html
 ```
 Acceso: `http://IP/report.html`
 
