@@ -63,11 +63,6 @@ sudo systemctl restart apache2
 ```
 Acceso: `http://IP/phpmyadmin`
 
-### Adminer (alternativa ligera):
-```bash
-sudo wget https://github.com/vrana/adminer/releases/download/v4.8.1/adminer.php -O /var/www/html/adminer.php
-```
-Acceso: `http://IP/adminer.php`
 
 ### GoAccess (análisis de logs Apache):
 ```bash
@@ -83,6 +78,14 @@ Acceso: `http://IP/report.html`
 ### Archivos importantes:
 - `/etc/apache2/sites-available/`
 - `/etc/apache2/sites-enabled/`
+
+### Crear usuario administrador total para bbdd
+```bash
+sudo mysql;
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'pass123';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
 
 ### Crear nuevos sitios:
 ```bash
