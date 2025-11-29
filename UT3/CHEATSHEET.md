@@ -94,6 +94,20 @@ Acceso: `http://IP/report.html`
 - `/etc/apache2/sites-available/`
 - `/etc/apache2/sites-enabled/`
 
+### Crear los  direcotrios web junto con los .html
+```bash
+sudo mkdir /var/www/iescaminas
+sudo mkdir /var/www/departamentos
+sudo nano /var/www/iescaminas/index.html
+sudo nano /var/www/departamentos/index.html
+```
+### Dar permisos correcots
+```bash
+sudo chown -R www-data:www-data /var/www/iescaminas
+sudo chown -R www-data:www-data /var/www/departamentos
+sudo chmod -R 755 /var/www/
+```
+
 
 ### Crear nuevos sitios:
 ```bash
