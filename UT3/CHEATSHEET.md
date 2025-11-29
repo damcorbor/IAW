@@ -237,6 +237,10 @@ Archivo `/var/www/bookmedik/core/controller/Database.php`
 ```php
 $con = new mysqli("localhost","bookmedik_admin","hola01","bookmedik");
 ```
+para buscar he usado:
+```bash
+❯ find . -iname "*database*"
+```
 
 ### Configuración con config.ini:
 Archivo `/var/www/bookmedik/config.ini`:
