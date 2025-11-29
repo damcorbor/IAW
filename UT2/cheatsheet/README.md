@@ -244,7 +244,48 @@ server {
 cat /var/log/nginx/http_access.log
 cat /var/log/nginx/https_access.log
 ```
+***FICHHEROS FINALES***
+****PROXY****
+```
+server {
+        listen 443 ssl;
+        server_name proxydamian.org;
+        ssl_certificate /etc/nginx/ssl/server.crt;
+        ssl_certificate_key /etc/nginx/ssl/server.key;
+        ssl_ciphers 'TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:ECDHE-RSA-AES128-GCM-SHA256';
+        ssl_protocols TLSv1.2 TLSv1.3;
+        add_header Host proxydamian;
+        location / {
+        proxy_pass http://repaso1.org:8080;
+    }
+}
+
+        server {
+                listen 80;
+                server_name proxydamian.org;
+                access_log /var/log/nginx/http_access.log;
+                return 301 https://proxydamian.org$request_uri;
+        }
+```
+
+****servidor****
+```
+server {
+    listen 8080;
+    root /var/www/repaso1/html/simple-static-website;
+    index index.html;
+    server_name repaso1.org;
+    location /contact.html {
+        auth_basic "zona segura";
+        auth_basic_user_file /etc/nginx/.htpasswd;
+        
+        try_files $uri $uri/ =404;
+    }
+}
+```
+
 
 ***Prueba final***
 - Acceder a https://ejemplo-proxy → debe funcionar con aviso de certificado autofirmado.
 - Acceder a http://ejemplo-proxy → debe redirigir automáticamente a HTTPS.
+
