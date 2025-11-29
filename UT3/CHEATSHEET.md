@@ -55,6 +55,14 @@ echo "Conexión OK";
 
 ## Práctica 3.2 – Herramientas relacionadas con LAMP
 
+### Crear usuario administrador total para bbdd
+```bash
+sudo mysql;
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'pass123';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
+
 ### phpMyAdmin (gestor web de BBDD):
 ```bash
 sudo apt install phpmyadmin
@@ -86,13 +94,6 @@ Acceso: `http://IP/report.html`
 - `/etc/apache2/sites-available/`
 - `/etc/apache2/sites-enabled/`
 
-### Crear usuario administrador total para bbdd
-```bash
-sudo mysql;
-CREATE USER 'admin'@'localhost' IDENTIFIED BY 'pass123';
-GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-```
 
 ### Crear nuevos sitios:
 ```bash
