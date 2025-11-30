@@ -7,3 +7,7 @@ Suites: trixie
 Components: stable
 
 Signed-By: /etc/apt/keyrings/docker.asc
+
+
+
+sudo usermod -aG docker $USER
