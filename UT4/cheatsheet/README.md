@@ -1,3 +1,4 @@
+```bash
 Types: deb
 
 URIs: https://download.docker.com/linux/debian
@@ -7,11 +8,10 @@ Suites: trixie
 Components: stable
 
 Signed-By: /etc/apt/keyrings/docker.asc
-
-
-
+```
+```bash
 sudo usermod -aG docker damcorbor
-
+```
 reiniicar
 
 
@@ -58,7 +58,7 @@ No hace falta ejecutarlo, solo escribir el Dockerfile.
 Dockerfile (SOLUCIÓN)
 
 Cópialo tal cual para que funcione.
-
+```bash
 FROM ubuntu:22.04
 
 RUN apt update && \
@@ -70,7 +70,7 @@ RUN echo "<?php phpinfo(); ?>" > /var/www/html/info.php
 EXPOSE 80
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
-
+```
 Ejercicio 2.2 – Lanzar un contenedor con volumen persistente
 
 Enunciado:
@@ -90,12 +90,13 @@ tener restart policy "always"
 Escribe el comando completo.
 
 Comando Docker run (SOLUCIÓN)
+```bash
 docker run -d \
   --name server1 \
   -p 8080:80 \
   -v /opt/webdata:/var/www/html \
   --restart=always \
   miimagen:latest
-
+```
 
 (Sustituye miimagen:latest por el nombre/tag de la imagen que generaste con tu Dockerfile.)
