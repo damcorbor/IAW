@@ -19,6 +19,7 @@ reiniicar
 
 
 CHEATSHEET
+```bash
 docker run -it ubuntu bash          ← entrar a contenedor
 docker run -d --name=algo imagen    ← background
 docker exec -it cont bash           ← entrar mientras está en ejecución
@@ -30,7 +31,7 @@ docker logs -f cont                 ← ver logs
 docker ps -a                        ← ver contenedores
 docker rm / docker rmi              ← borrar
 docker run -p 8080:80 nginx         ← exponer puertos
-
+```
 
 
 
