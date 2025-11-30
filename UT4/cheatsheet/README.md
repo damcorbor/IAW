@@ -12,3 +12,4 @@ Signed-By: /etc/apt/keyrings/docker.asc
 
 sudo usermod -aG docker damcorbor
 
+reiniicar
